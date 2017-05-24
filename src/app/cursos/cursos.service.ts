@@ -11,7 +11,7 @@ export class CursosService {
   }
   getNotas(){
 
-    return  'Getnotas ';  
+    return  'BUSCAR NOTAS ';  
 
   }
 
