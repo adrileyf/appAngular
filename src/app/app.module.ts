@@ -2,26 +2,22 @@ import {BrowserModule } from '@angular/platform-browser';
 import {NgModule } from '@angular/core';
 import {FormsModule } from '@angular/forms';
 import {HttpModule } from '@angular/http';
-import {AppComponent } from './app.component';
-import {Produto } from './produto/produto.component';
- 
+import {AppComponent } from './app.component'; 
 import {CursosModule } from './cursos/cursos.module';
-import {alunosModule} from './alunos/alunos.module';
-import {FuncionarioModule} from './funcionario/funcionario.module';
+import {CursosService} from './cursos/cursos.service';
+ 
 @NgModule({
   declarations: [
-    AppComponent,
-         Produto        
+    AppComponent
+                  
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    CursosModule,
-    alunosModule,
-    FuncionarioModule    
+    CursosModule   
   ],
-  providers: [],
-  bootstrap: [Produto]
+  providers: [CursosService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
